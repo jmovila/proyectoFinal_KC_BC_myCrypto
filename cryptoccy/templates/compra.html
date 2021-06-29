@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Currency | Purchase</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='milligram.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <a href="/">home/</a>
+    <a>purchase/</a>
+    <a href="status">status</a> 
+</body>
+
+<h1 class="header">myCrypto</h1>
+<form action="purchase" method="post">
+<fieldset >
+{{ form.hidden_tag() }}
+<div>
+    {{ form.fecha.label }}
+    {{ form.fecha( id="box", type="date") }}
+    
+    {{ form.hora.label }}
+    {{ form.hora( id="box") }}
+</div>
+
+<div>
+    {{ form.fromCcy.label }}
+    {{ form.fromCcy( id="box") }}
+    
+    {{ form.fromQty.label }}
+    {{ form.fromQty( id="box") }}
+</div>
+<div>
+    {{ form.toCcy.label }}
+    {{ form.toCcy( id="box", type="text") }}
+    
+    {{ form.toQty.label }}
+    {{ form.toQty( id="box") }}
+</div>
+</fieldset>
+
+    {{ form.submit() }}
+
+</form>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Currency</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='milligram.css')}}">
+</head>
+<body>
+    <a>Home/</a>
+    <a href="purchase">Purchase/</a>
+    <a href="status">Status</a>
+    <h1 class=header>Movimientos</h1>
+    <div class="container">
+    <table>
+    <thead>
+    <tr>
+        <th class="column">Fecha</th>
+        <th class="column">Hora</th>
+        <th class="column">FromCcy</th>
+        <th class="column">FromQty</th>
+        <th class="column">ToCcy</th>
+        <th class="column">ToQty</th>
+        <th class="column">P.U</th>
+    </tr>
+</thead>
+{% for movimiento in datos %}
+<tr>
+    <td>{{ movimiento.Fecha }}</td>
+    <td>{{ movimiento.Hora }}</td>
+    <td>{{ movimiento.FromCcy }}</td>
+    <td>{{ movimiento.FromQty }}</td>
+    <td>{{ movimiento.ToCcy }}</td>
+    <td>{{ movimiento.ToQty }}</td>
+    <td>{{ movimiento.PrecioU }}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+SECRET_KEY = '*XGU[<2WinZsHw@+dl~;3WsQNb5KbDCJ'
